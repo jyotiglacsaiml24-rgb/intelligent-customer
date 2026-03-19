@@ -1,0 +1,28 @@
+body{
+font-family: Arial;
+margin:40px;
+}
+
+#chat{
+border:1px solid #ccc;
+height:300px;
+width:500px;
+padding:10px;
+overflow-y:auto;
+background:#f9f9f9;
+margin-bottom:10px;
+}
+
+input{
+width:350px;
+padding:5px;
+}
+
+button{
+padding:5px 10px;
+margin-left:5px;
+}
+
+p{
+margin:5px 0;
+}
