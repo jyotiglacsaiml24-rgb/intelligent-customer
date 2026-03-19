@@ -1,8 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Customer Support AI</title>
 <link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    font-family: Arial;
+    margin: 40px;
+}
+
+chat {
+    border: 1px solid #ccc;
+    height: 300px;
+    width: 400px;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+
+input {
+    width: 300px;
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+</style>
+
 </head>
 
 <body>
@@ -11,10 +40,11 @@
 
 <div id="chat"></div>
 
-<input type="text" id="message" placeholder="Ask something">
+<input type="text" id="message" placeholder="Ask something...">
 <button type="button" onclick="sendMessage()">Send</button>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
