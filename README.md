@@ -49,6 +49,12 @@ Unlike traditional chatbots, this system can learn from human agent corrections 
 - API Testing: Swagger UI  
 - AI Logic: Rule-based NLP
 
+<------Improvements----->
+- Added better UI
+- Improved AI responses
+- Added error handling
+- Enhanced documentation
+
 <-----Future Scope----->
 
 - Integration with advanced AI models (OpenAI / LLMs)  
