@@ -43,4 +43,7 @@ def generate_response(message):
     elif "payment" in message:
         return "We support UPI, Credit Card, and Debit Card.", 0.85
 
+    elif "delivery" in message:
+        return "Delivery takes 3-5 days", 0.85
+
     return "I am not confident. Escalating to human agent.", 0.5
