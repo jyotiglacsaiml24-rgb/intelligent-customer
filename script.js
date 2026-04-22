@@ -16,8 +16,10 @@ function sendMessage(){
     chat.innerHTML += "<p><b>AI:</b> " + data.response + "</p>";
     chat.scrollTop = chat.scrollHeight;
 })
+
 .catch(err => {
-  chat.innerHTML += "<p><b>Error:</b> Server not responding</p>";
+    chat.innerHTML += "<p>Error connecting to server</p>";
+});
 });
 input.value="";
 }
