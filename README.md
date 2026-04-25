@@ -76,6 +76,12 @@ Meenal Kushwah
 Jyoti
 Parnika Gupta
 
+<-----Contribution----->
+
+Parnika Gupta → Led backend development, designed AI response logic, implemented feedback learning loop, and developed REST APIs  
+Jyoti → Worked on frontend interface and UI design  
+Meenal Kushwah → Assisted in documentation and testing  
+
 <----Contact---->
 For queries or collaboration, connect anytime
 
