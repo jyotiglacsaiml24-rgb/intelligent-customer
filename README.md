@@ -3,7 +3,7 @@
 <-----Overview----->
 
 This project is an AI-based customer support system that automates responses and improves over time using a feedback learning loop.
-Unlike traditional chatbots, this system can learn from human agent corrections and provide better responses in the future.
+Unlike traditional chatbots, this system can learn from human agent corrections and provide better responses in the future....
 
 <-----Features----->
 
@@ -27,7 +27,7 @@ Unlike traditional chatbots, this system can learn from human agent corrections 
 - To reduce manual workload on human agents  
 - To improve response accuracy using feedback  
 - To implement confidence-based escalation  
-- To build a system that continuously learns from past interactions  
+- To build a system that continuously learns from past interactions. 
 
 <-----How It Works----->
 
