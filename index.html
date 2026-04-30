@@ -1,50 +1,111 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title> Customer Support AI </title>
-<link rel="stylesheet" href="style.css">
+<title>Customer Support AI</title>
 
 <style>
 body {
     font-family: Arial;
-    margin: 40px;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-chat {
-    border: 1px solid #ccc;
-    height: 301px;
-    width: 401px;
-    padding: 10px;
+#chat {
+    max-width: 600px;
+    height: 450px;
+    margin: auto;
     overflow-y: auto;
-    margin-bottom: 10px;
-    background: #f9f9f9;
+    padding: 15px;
+    background: #020617;
+    border-radius: 12px;
+}
+
+.user {
+    text-align: right;
+    background: #38bdf8;
+    color: black;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 12px;
+    display: inline-blocks;
+}
+
+.ai {
+    text-align: left;
+    background: #1e293b;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 12px;
+    display: inline-block;
 }
 
 input {
-    width: 300px;
-    padding: 5px;
+    padding: 12px;
+    width: 60%;
+    margin-top: 8px;
+    border: none;
 }
 
 button {
-    padding: 5px 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #38bdf8;
     cursor: pointer;
 }
 </style>
-
 </head>
 
 <body>
 
-<h2>  AI Customer Support </h2>
+<h2>Customer Support AI</h2>
 
 <div id="chat"></div>
 
-<input type="text" id="message" placeholder="Ask something...">
-<button type="button" onclick="sendMessage()">Send</button>
+<input id="query" placeholder="Type message...">
 
-<script src="script.js"></script>
+<br>
+
+<button id="sendBtn">Send</button>
+<button id="historyBtn">Show History</button>
+
+<script>
+async function send() {
+    let q = document.getElementById("query").value;
+
+    if (!q) return;
+
+    let chat = document.getElementById("chat");
+
+    chat.innerHTML += "<p>You: " + q + "</p>";
+
+    try {
+        let r = await fetch("http://127.0.0.1:8000/chat", {
+            method: "POST",
+            headers: {"Content-Type":"application/json"},
+            body: JSON.stringify({query:q})
+        });
+
+        let d = await r.json();
+
+        chat.innerHTML += "<p>AI: " + d.response + "</p>";
+
+    } catch(e) {
+        chat.innerHTML += "<p>Error</p>";
+    }
+
+    document.getElementById("query").value = "";
+}
+
+document.getElementById("query").addEventListener("keydown", function(e){
+    if(e.key === "Enter"){
+        e.preventDefault();
+        send();
+    }
+});
+</script>
 
 </body>
-
 </html>
